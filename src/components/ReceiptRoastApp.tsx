@@ -183,15 +183,12 @@ export function ReceiptRoastApp() {
 
         setStep("result");
       } catch (err) {
-        clearTimeout(timeoutId);
-        console.error("Roast error:", err);
-        showError(
-          lang === "en"
-            ? "Connection failed. Check your internet or try again."
-            : "No pudimos conectar. Revisa tu internet o inténtalo de nuevo."
-        );
-        setStep("home");
-      }
+  clearTimeout(timeoutId);
+  console.error("Roast error:", err);
+  const errorMessage = err instanceof Error ? err.message : String(err);
+  showError(`Error: ${errorMessage}`);
+  setStep("home");
+}
     },
     [mode, lang, showError],
   );
