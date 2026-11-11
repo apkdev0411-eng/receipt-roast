@@ -1,0 +1,56 @@
+export type Language = "es" | "en";
+
+export const translations = {
+  es: {
+    title: "Receipt Roast",
+    subtitle: "Sube tu ticket y deja que la IA te destruya con elegancia",
+    chooseMode: "Elige el modo antes de subir",
+    uploadButton: "Subir ticket / extracto",
+    uploadHint: "JPG o PNG · máx. 12 MB · no guardamos tu imagen",
+    thisMonth: "Este mes",
+    mostSpent: "Más gastado en",
+    ticketsAnalyzed: "tickets analizados",
+    previousRoasts: "Roasts anteriores",
+    clearHistory: "Borrar historial",
+    roastDuro: "Roast Duro",
+    roastDuroDesc: "Stand-up sarcástico. Sin anestesia.",
+    coach: "Coach Sarcástico",
+    coachDesc: "Ironía + consejo disfrazado de broma.",
+    insight: "Insight útil",
+    extraComment: "Comentario extra",
+    breakdown: "Desglose",
+    shareCard: "Generar tarjeta para compartir",
+    tryAnother: "Probar otro ticket",
+    processing: "Procesando",
+    footer: "Receipt Roast · roast de hábitos, nunca de identidad",
+    language: "Idioma",
+  },
+  en: {
+    title: "Receipt Roast",
+    subtitle: "Upload your receipt and let the AI destroy you with elegance",
+    chooseMode: "Choose the mode before uploading",
+    uploadButton: "Upload receipt / statement",
+    uploadHint: "JPG or PNG · max 12 MB · we don't store your image",
+    thisMonth: "This month",
+    mostSpent: "Most spent on",
+    ticketsAnalyzed: "tickets analyzed",
+    previousRoasts: "Previous roasts",
+    clearHistory: "Clear history",
+    roastDuro: "Hard Roast",
+    roastDuroDesc: "Stand-up sarcasm. No anesthesia.",
+    coach: "Sarcastic Coach",
+    coachDesc: "Irony + advice disguised as a joke.",
+    insight: "Useful insight",
+    extraComment: "Extra comment",
+    breakdown: "Breakdown",
+    shareCard: "Generate share card",
+    tryAnother: "Try another receipt",
+    processing: "Processing",
+    footer: "Receipt Roast · roasting habits, never identity",
+    language: "Language",
+  },
+} as const;
+
+export function getTranslations(lang: Language) {
+  return translations[lang];
+}
